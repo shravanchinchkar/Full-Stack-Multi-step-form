@@ -14,7 +14,18 @@ const PersonalInfo = () => {
   } = useForm();
 
   const onSubmit = (data) => {
-    console.log(data);
+    console.log("Data is:-",data);
+    fetch("http://localhost:3000/user",{
+      method:"POST",
+      body:JSON.stringify({
+        name:data.fullname,
+        email:data.email,
+        phone:data.phone
+      }),
+      headers:{
+        "content-type":"application/json"
+      }
+    })
     console.log("Current Step-",value.steps)
     value.setsteps((prev) => prev + 1);
     console.log("Next Step-",value.steps);

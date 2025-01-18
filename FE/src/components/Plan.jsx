@@ -15,13 +15,20 @@ const Plan = () => {
     }
   };
 
+  async function getPalns(){
+    
+  }
+  useEffect(()=>{
+
+  },[])
+
   const plans = [
     {
-      planImage: "./assets/images/icon-arcade.svg",
-      planName: "Arcade",
-      amountPerMonth: "$9/mo",
-      amountPerYear: "$90/yr",
-      message: "2 months free",
+      "planImage": "./assets/images/icon-arcade.svg",
+      "planName": "Arcade",
+      "amountPerMonth": "$9/mo",
+      "amountPerYear": "$90/yr",
+      "message": "2 months free",
     },
     {
       planImage: "./assets/images/icon-advanced.svg",
